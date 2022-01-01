@@ -1,5 +1,5 @@
-# Clear project with React, Typescript, Electorn.js
-you can just clone this project and start develope your app.
+# Clear project with React, Typescript, Electron.js
+You can just clone this project and start develop your app.
 I made a simple api implementation to make fs, ipcMain, ipcRenderer work.
 
 ## How to start:
