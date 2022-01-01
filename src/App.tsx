@@ -3,21 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const ButtonStyle = {
+    padding:'5px'
+  };
+  function sendEvent() {
+    window.api.receive("fromMain", (data:any) => {
+      console.log(`Received ${data} from main process`);
+    });
+    window.api.send("toMain", "some your data");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Open console and click button below.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={sendEvent} style={ButtonStyle}>Send Event to main!</button>
       </header>
     </div>
   );
